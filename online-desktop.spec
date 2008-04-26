@@ -16,7 +16,7 @@ BuildRequires:	intltool >= 0.36.2
 BuildRequires:	libtool
 BuildRequires:	nspr-devel >= 1:4.6.0
 BuildRequires:	nss-devel >= 1:3.0.0
-BuildRequires:	pidgin-libs
+BuildRequires:	pidgin-devel
 BuildRequires:	pkgconfig
 BuildRequires:	python-devel
 BuildRequires:	rpmbuild(macros) >= 1.311
