@@ -1,7 +1,7 @@
 Summary:	Desktop built around web sites and online services
 Name:		online-desktop
 Version:	0.2.28
-Release:	1
+Release:	2
 License:	GPL v2
 Group:		Applications
 Source0:	http://ftp.gnome.org/pub/GNOME/sources/online-desktop/0.2/%{name}-%{version}.tar.bz2
@@ -20,7 +20,8 @@ BuildRequires:	pidgin-devel
 BuildRequires:	pkgconfig
 BuildRequires:	python-devel
 BuildRequires:	rpmbuild(macros) >= 1.311
-Requires(post,postun):	gtk+2
+Requires(post,postun):	gtk-update-icon-cache
+Requires(post,postun):	hicolor-icon-theme
 Requires(post,preun):	GConf2
 Requires:	bigboard
 Requires:	gnome-session
