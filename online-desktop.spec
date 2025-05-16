@@ -1,4 +1,5 @@
 Summary:	Desktop built around web sites and online services
+Summary(pl.UTF-8):	Pulpit zbudowany w oparciu o strony WWW i usługi online
 Name:		online-desktop
 Version:	0.2.28
 Release:	2
@@ -33,6 +34,11 @@ The "online desktop" is a flavor of the GNOME desktop built around web
 sites and online services. This package contains a grab-bag of
 integration points with various sites and services.
 
+%description -l pl.UTF-8
+"online desktop" to odmiana pulpitu GNOME zbudowana w oparciu o strony
+WWW i usługi online. Ten pakiet zawiera pakiet punktów integracji z
+różnymi stronami i usługami.
+
 %prep
 %setup -q
 
@@ -52,8 +58,8 @@ rm -rf $RPM_BUILD_ROOT
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-rm -f $RPM_BUILD_ROOT%{_libdir}/pidgin/libdbus-api-plugin.la
-rm -f $RPM_BUILD_ROOT%{py_sitedir}/nssdecrypt.la
+%{__rm} $RPM_BUILD_ROOT%{_libdir}/pidgin/libdbus-api-plugin.la
+%{__rm} $RPM_BUILD_ROOT%{py_sitedir}/nssdecrypt.la
 
 %py_postclean
 
